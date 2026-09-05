@@ -1,0 +1,29 @@
+# Track only Java source. Everything Eclipse generates stays out of git.
+
+# 1. Ignore everything by default...
+*
+
+# 2. ...but descend into directories so nested sources can be matched.
+!*/
+
+# 3. Re-include the things we actually want.
+!*.java
+!/.gitignore
+
+# 4. Eclipse-generated dirs: ignored outright so git never walks them.
+.metadata/
+bin/
+target/
+.settings/
+.apt_generated/
+.recommenders/
+
+# Eclipse-generated project metadata (also covered by rule 1; listed for clarity).
+.classpath
+.project
+*.class
+*.launch
+*.jar
+*.war
+!*.md
+!*.txt
